@@ -1,0 +1,164 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "Question 1",
+    "created_at": "2019-10-19T06:35:31.181Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "Question 2",
+    "created_at": "2019-10-19T06:35:53.167Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "Question 3",
+    "created_at": "2019-10-19T06:36:02.097Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "Question 4",
+    "created_at": "2019-10-19T06:36:21.509Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "Question 5",
+    "created_at": "2019-10-19T06:36:30.572Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 6,
+  "fields": {
+    "question": "Qustion 6",
+    "created_at": "2019-10-19T06:36:41.629Z"
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 1,
+  "fields": {
+    "text": "model ipsum dolor",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 2,
+  "fields": {
+    "text": "sad salut mofid",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 3,
+  "fields": {
+    "text": "gur jafar yggo",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 4,
+  "fields": {
+    "text": "adas diuej fsar jitre fores",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 5,
+  "fields": {
+    "text": "ter joie vadio ope",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 6,
+  "fields": {
+    "text": "gioof test",
+    "poll": 3
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 7,
+  "fields": {
+    "text": "test 1",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 8,
+  "fields": {
+    "text": "test 2",
+    "poll": 4
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 9,
+  "fields": {
+    "text": "test 3",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 10,
+  "fields": {
+    "text": "test 5",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 11,
+  "fields": {
+    "text": "test 6",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choise",
+  "pk": 12,
+  "fields": {
+    "text": "test text",
+    "poll": 6
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$f3udry9JG9bG$RvjvgMEZmaVjvS7X0jBsveyV8SZ0dZvwLCZ/7JCuoEM=",
+    "last_login": "2019-10-19T06:32:48.652Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-10-19T05:33:23.264Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
