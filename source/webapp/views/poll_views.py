@@ -10,8 +10,9 @@ class IndexView(ListView):
     template_name = 'poll/index.html'
     context_object_name = 'polls'
     model = Poll
-    paginate_by = 4
+    paginate_by = 5
     paginate_orphans = 1
+    ordering = ['-created_at']
 
 class PollView(DetailView):
     template_name = 'poll/poll.html'
