@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block menu %}
+{#    <li><a href="{% url "article_update" article.pk %}">Edit</a></li>#}
+{#    <li><a href="{% url "article_delete" article.pk %}">Delete</a></li>#}
+{% endblock %}
+
+{% block content %}
+    <h1>{{ poll.question }}</h1>
+    <hr/>
+    <h3>Choises:</h3>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    <div class="comment-list">
+        {% for choise in poll.choises.all %}
+            <div class="comment">
+                <div class="pre">{{ choise.text }}</div>
+                    <p class="comment-links">
+{#                        <a href="{% url 'comment_update' comment.pk %}">Edit</a>#}
+{#                        <a href="{% url 'comment_delete' comment.pk %}">Delete</a>#}
+                    </p>
+            </div>
+        {% empty %}
+            <p>No choises yet.</p>
+        {% endfor %}
+    </div>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+
+{#        <form action="{% url 'article_comment_create' article.pk %}" method="POST" id="add_comment">#}
+{#            {% include 'partial/form.html' with button_text='Add' %}#}
+{#        </form>#}
+
+{% endblock %}
