@@ -31,7 +31,7 @@
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
-    <form action="{% url 'poll_choise_create' poll.pk %}" method="POST" id="add_choise">
-        {% include 'partial/form.html' with button_text='Create' %}
-    </form>
+    <p>
+    <a href="{% url 'poll_choise_create' poll.pk %}" class="create">Create</a>
 {% endblock %}
+    </p>
