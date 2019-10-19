@@ -110,3 +110,27 @@ h1 {
 .page-active {
     background: #ffc122;
 }
+.choise-list {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.choise {
+    border: solid 1px sienna;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.choise p {
+    margin: 0 0 5px;
+}
+
+.choise-links {
+    text-align: right;
+}
+
+.choise .choise-links {
+    margin: 5px 0 0;
+}

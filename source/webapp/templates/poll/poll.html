@@ -5,6 +5,7 @@
 {% block menu %}
     <li><a href="{% url "poll_update" poll.pk %}">Edit</a></li>
     <li><a href="{% url "poll_delete" poll.pk %}">Delete</a></li>
+    <li><a href="#add_choise">Add choise</a></li>
 {% endblock %}
 
 {% block content %}
@@ -14,10 +15,14 @@
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
-    <div class="comment-list">
+    <div class="-list">
         {% for choise in poll.choises.all %}
-            <div class="comment">
+            <div class="choise float-right">
                 <div class="pre"><p>{{ choise.text }}</p></div>
+                <p class="choise-links">
+                    <a href="{% url 'choise_update' choise.pk %}">Edit</a>
+                    <a href="{% url 'choise_delete' choise.pk %}">Delete</a>
+                </p>
             </div>
         {% empty %}
             <p>No choises yet.</p>
@@ -26,4 +31,7 @@
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
+    <form action="{% url 'poll_choise_create' poll.pk %}" method="POST" id="add_choise">
+        {% include 'partial/form.html' with button_text='Create' %}
+    </form>
 {% endblock %}

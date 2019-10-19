@@ -11,3 +11,9 @@ class ChoiseForm(forms.ModelForm):
     class Meta:
         model = Choise
         exclude = []
+
+class PollChoiseForm(forms.ModelForm):
+    class Meta:
+        model = Choise
+        fields = ['text']
+
