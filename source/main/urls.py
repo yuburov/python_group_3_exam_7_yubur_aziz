@@ -16,9 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webapp.views import IndexView
-from webapp.views.choise_views import ChoiseForPullCreateView, ChoiseUpdateView, ChoiseDeleteView
-from webapp.views.poll_views import PollView, PollCreateView, PollUpdateView, PollDeleteView
+from webapp.views import IndexView, PollView, PollCreateView, PollUpdateView, PollDeleteView, ChoiseForPullCreateView, \
+    ChoiseUpdateView, ChoiseDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
