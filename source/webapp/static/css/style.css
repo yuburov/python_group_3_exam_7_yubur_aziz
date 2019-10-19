@@ -75,6 +75,7 @@ h1 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 299px;
 }
 
 .pagination a, .page-disabled, .page-active {
@@ -133,4 +134,11 @@ h1 {
 
 .choise .choise-links {
     margin: 5px 0 0;
+}
+.btn-secondary{
+    width: 100px;
+    margin-top: 20px;
+}
+.no{
+    width: 100px;
 }

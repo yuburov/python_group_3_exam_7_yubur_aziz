@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Answers:</h1>
+    <hr/>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+        {% csrf_token %}
+
+        {% for answer in answers %}
+            <h2>{{ answer.poll }}</h2>
+            <div>Answer: {{ answer.choise }}</div>
+            <hr/>
+        {% endfor %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+{% endblock %}

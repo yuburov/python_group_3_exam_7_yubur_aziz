@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Create Answer{% endblock %}
+{% block content %}
+   <h1>Create Answer</h1>
+   <form action="{% url "poll_answer" poll.pk %}" method="POST">
+   {% csrf_token %}
+        {% for choise in choises %}
+        <input type="radio" value="{{ choise.pk }}" id="{{ choise.pk }}" name="answer"> {{ choise.text }}<hr/>
+        {% endfor %}
+        <input type="submit" value="Select" class="btn btn-dark">
+   </form>
+{% endblock %}

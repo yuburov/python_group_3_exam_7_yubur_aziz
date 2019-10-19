@@ -7,10 +7,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Are you sure want to delete poll {{ poll }}?</h1>
-    <form method="POST" action="{% url 'poll_delete' poll.pk %}" class="text-center">
+    <h1 class="text-center">Are you sure you want to delete - {{ poll }}?</h1>
+    <form method="POST"  class="text-center" action="{% url 'poll_delete' poll.pk %}">
         {% csrf_token %}
-        <p><input type="submit" value="Confirm"></p>
-        <p><a href="{% url 'poll_view' poll.pk %}">Cancel</a></p>
+        <p><input type="submit" class="btn btn-secondary" value="Yes"></p>
+        <p><a href="{% url 'poll_view' poll.pk %}" class="no btn btn-primary">No</a></p>
     </form>
 {% endblock %}

@@ -20,3 +20,6 @@ class Answer(models.Model):
     poll = models.ForeignKey('webapp.Poll', related_name='answers', on_delete=models.CASCADE, verbose_name='Опрос')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
     choise = models.ForeignKey('webapp.Choise', related_name='answers', on_delete=models.CASCADE, verbose_name='Вариант ответа')
+
+    def __str__(self):
+        return "{} | {}".format(self.poll, self.choise)

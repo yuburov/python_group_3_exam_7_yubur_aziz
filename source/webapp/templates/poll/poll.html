@@ -6,6 +6,8 @@
     <li><a href="{% url "poll_update" poll.pk %}">Edit</a></li>
     <li><a href="{% url "poll_delete" poll.pk %}">Delete</a></li>
     <li><a href="{% url 'poll_choise_create' poll.pk %}">Add choise</a></li>
+    <li><a href="{% url 'answer_index' %}">Answers</a></li>
+
 {% endblock %}
 
 {% block content %}
@@ -17,7 +19,7 @@
     {% endif %}
     <div class="-list">
         {% for choise in poll.choises.all %}
-            <div class="choise float-right">
+            <div class="choise ">
                 <div class="pre"><p>{{ choise.text }}</p></div>
                 <p class="choise-links">
                     <a href="{% url 'choise_update' choise.pk %}">Edit</a>
@@ -32,6 +34,6 @@
         {% include 'partial/pagination.html' %}
     {% endif %}
     <p>
-    <a href="{% url 'poll_choise_create' poll.pk %}" class="create">Create</a>
+    <a href="{% url 'poll_choise_create' poll.pk %}"class="btn btn-dark mt-2" type="button">Create</a>
 {% endblock %}
     </p>

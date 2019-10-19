@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Delete Choise{% endblock %}
+{% block title %}Delete{% endblock %}
 
 {% block content %}
-    <h1>Are you sure want to delete choise {{ choise }}?</h1>
-    <form method="POST" action="{% url 'choise_delete' choise.pk %}" class="text-center">
+    <h1 class="text-center">Are you sure you want to delete - {{ choise }}?</h1>
+    <form method="POST"  class="text-center" action="{% url 'choise_delete' choise.pk %}">
         {% csrf_token %}
-        <p><input type="submit" value="Confirm"></p>
-        <p><a href="{% url 'index'%}">Cancel</a></p>
+        <p><input type="submit" class="btn btn-secondary" value="Yes"></p>
+        <p><a href="{% url 'index' %}" class="no btn btn-primary">No</a></p>
     </form>
 {% endblock %}
